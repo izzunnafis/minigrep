@@ -7,4 +7,9 @@ fn main() {
 
     println!("Searching for {}", query);
     println!("In file {}", filename);
+
+    let file_contents = std::fs::read_to_string(filename)
+                            .expect("Something went wrong reading the file");
+    
+    println!("\n With text:\n {}", file_contents);
 }
