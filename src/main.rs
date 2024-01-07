@@ -7,9 +7,6 @@ fn main() {
         std::process::exit(1);
     });
 
-    println!("Searching for {}", args_config.query);
-    println!("In file {}", args_config.filename);
-
     if let Err(e) = minigrep::run(args_config) { 
         println!("Cannot read the file: {}", e);
         std::process::exit(1);
